@@ -11,6 +11,11 @@ connections = []
 addresses = []
 
 
+def main():
+    create_workers()
+    create_jobs()
+
+
 # Creating a socket for connecting two computers.
 def create_socket():
     try:
@@ -189,5 +194,5 @@ def create_jobs():
     queue.join()
 
 
-create_workers()
-create_jobs()
+if __name__ == "__main__":
+    main()
